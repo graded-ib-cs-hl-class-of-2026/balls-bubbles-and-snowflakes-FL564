@@ -11,6 +11,10 @@ public class Sketch extends PApplet {
     private Bubble bubble2;
     private Bubble bubble3;
     private Bubble bubble4;
+    private Snowflake snowflake1;
+    private Snowflake snowflake2;
+    private Snowflake snowflake3;
+    private Snowflake snowflake4;
 
     /**
      * This method can only be used to change the window size. It runs before the
@@ -33,6 +37,10 @@ public class Sketch extends PApplet {
         bubble2 = new Bubble(this, 25, 150, 100, 1, -2);
         bubble3 = new Bubble(this, 30, 250, 20, 2, -5);
         bubble4 = new Bubble(this, 15, 200, 50, -1, -3);
+        snowflake1 = new Snowflake(this);
+        snowflake2 = new Snowflake(this, 25, 150, 100, 1, 2);
+        snowflake3 = new Snowflake(this, 30, 250, 20, 2, 1);
+        snowflake4 = new Snowflake(this, 15, 200, 50, -1, 3);
     }
 
     /**
@@ -62,6 +70,14 @@ public class Sketch extends PApplet {
         bubble3.move();
         bubble4.draw();
         bubble4.move();
+        snowflake1.draw();
+        snowflake1.move();
+        snowflake2.draw();
+        snowflake2.move();
+        snowflake3.draw();
+        snowflake3.move();
+        snowflake4.draw();
+        snowflake4.move();
            
     
     }
