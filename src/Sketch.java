@@ -60,7 +60,7 @@ public class Sketch extends PApplet {
         ball4.move();
         ball1.setColors(color(255, 100, 100), color(0, 0, 0));
         ball2.setColors(color(100, 255, 100), color(0, 0, 0));
-        ball3.setColors(color(100, 100, 255), color(0, 0, 0));
+        ball3.setColors(color(200, 100, 155), color(0, 0, 0));
         ball4.setColors(color(255, 255, 100), color(0, 0, 0));
         bubble1.draw();
         bubble1.move();
@@ -78,6 +78,7 @@ public class Sketch extends PApplet {
         snowflake3.move();
         snowflake4.draw();
         snowflake4.move();
+        
            
     
     }

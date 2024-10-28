@@ -4,7 +4,9 @@ class Snowflake {
     private float x;
     private float y;
     private float xSpeed;
-    private float ySpeed;  
+    private float ySpeed;
+    private int fillColor;
+    private int borderColor;  
    
    
     public Snowflake(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
@@ -14,6 +16,9 @@ class Snowflake {
         this.y = y;
         this.xSpeed = xspeed;
         this.ySpeed = yspeed;
+        this.fillColor = s.color(255, 255, 255);
+        this.borderColor = s.color(255, 255, 255);
+
     }
 
     public Snowflake(Sketch sketch) {
@@ -23,13 +28,17 @@ class Snowflake {
         y = 0;
         xSpeed = 0;
         ySpeed = 4;
+        this.borderColor = s.color(255, 255, 255);
     }
 
     public void draw() {
+        s.stroke(borderColor);
+        s.fill(fillColor);
         s.line(x+radius,y,x-radius,y);
         s.line(x,y+radius,x,y-radius);
         s.line(x+radius*.707f,y+radius*.707f,x-radius*.707f,y-radius*.707f);
         s.line(x+radius*.707f,y-radius*.707f,x-radius*.707f,y+radius*.707f);
+    
     }
 
     public void move() {
@@ -45,5 +54,19 @@ class Snowflake {
             y = s.height - radius;
         }
 }
+
+    public int getFillColor() {
+        return fillColor;
+    }
+    public int getBorderColor() {
+        return borderColor;
+    }
+    public void setColors(int fill, int border) {
+        borderColor = border;
+        fillColor = fill;
+       
+
+}
+
 }
 
