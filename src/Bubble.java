@@ -16,7 +16,7 @@ class Bubble {
     public Bubble(Sketch sketch) {
         s = sketch;
         radius = 20;
-        x = 0;
+        x = 300;
         y = 0;
         xSpeed = 0;
         ySpeed = -4;

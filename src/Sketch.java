@@ -30,9 +30,9 @@ public class Sketch extends PApplet {
         ball3 = new Ball(this, 35, 200, 200, 5, 1);
         ball4 = new Ball(this, 25, 100, 100, 10, 1);
         bubble1 = new Bubble(this);
-        bubble2 = new Bubble(this, 25, 50, 100, 0, -2);
-        bubble3 = new Bubble(this, 30, 30, 20, 0, -5);
-        bubble4 = new Bubble(this, 15, 75, 50, 0, -3);
+        bubble2 = new Bubble(this, 25, 150, 100, 1, -2);
+        bubble3 = new Bubble(this, 30, 250, 20, 2, -5);
+        bubble4 = new Bubble(this, 15, 200, 50, -1, -3);
     }
 
     /**
