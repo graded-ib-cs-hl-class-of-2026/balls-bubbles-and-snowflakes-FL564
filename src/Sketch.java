@@ -7,6 +7,10 @@ public class Sketch extends PApplet {
     private Ball ball2;
     private Ball ball3;
     private Ball ball4;
+    private Bubble bubble1;
+    private Bubble bubble2;
+    private Bubble bubble3;
+    private Bubble bubble4;
 
     /**
      * This method can only be used to change the window size. It runs before the
@@ -25,6 +29,10 @@ public class Sketch extends PApplet {
         ball2 = new Ball(this, 50, 250, 100, 3, -2);
         ball3 = new Ball(this, 35, 200, 200, 5, 1);
         ball4 = new Ball(this, 25, 100, 100, 10, 1);
+        bubble1 = new Bubble(this);
+        bubble2 = new Bubble(this, 25, 50, 100, 0, -2);
+        bubble3 = new Bubble(this, 30, 30, 20, 0, -5);
+        bubble4 = new Bubble(this, 15, 75, 50, 0, -3);
     }
 
     /**
@@ -33,7 +41,7 @@ public class Sketch extends PApplet {
      * movement.
      */
     public void draw() {
-        background(200, 20, 255);
+        background(20, 100, 255);
         ball1.draw();
         ball1.move();
         ball2.draw();
@@ -46,14 +54,17 @@ public class Sketch extends PApplet {
         ball2.setColors(color(100, 255, 100), color(0, 0, 0));
         ball3.setColors(color(100, 100, 255), color(0, 0, 0));
         ball4.setColors(color(255, 255, 100), color(0, 0, 0));
+        bubble1.draw();
+        bubble1.move();
+        bubble2.draw();
+        bubble2.move();
+        bubble3.draw();
+        bubble3.move();
+        bubble4.draw();
+        bubble4.move();
            
     
     }
-
-    private Bubble bubble1;
-    private Bubble bubble2;
-    private Bubble bubble3;
-    private Bubble bubble4;
 
 
     /** All processing sketches have to use this main method. Don't touch this! */
