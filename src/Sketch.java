@@ -47,7 +47,14 @@ public class Sketch extends PApplet {
         ball3.setColors(color(100, 100, 255), color(0, 0, 0));
         ball4.setColors(color(255, 255, 100), color(0, 0, 0));
            
+    
     }
+
+    private Bubble bubble1;
+    private Bubble bubble2;
+    private Bubble bubble3;
+    private Bubble bubble4;
+
 
     /** All processing sketches have to use this main method. Don't touch this! */
     public static void main(String[] args) {

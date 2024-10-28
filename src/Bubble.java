@@ -1,13 +1,21 @@
-/** THE ENTIRE CLASS IS INSIDE A COMMENT RIGHT NOW. TO ENABLE THE CLASS, DELETE THIS LINE AND THE LAST ONE.
 
 class Bubble {
 
     //MISSING MANY INSTANCE VARIABLES
 
     //MISSING CONSTRUCTORS
+    private float radius;
+    private float x;
+    private float y;
+    private float xSpeed;
+    private float ySpeed;
+    private int fillColor;
+    private int borderColor;
+    private Sketch s;
 
     // accessors for the radius, diameter, x, and y values 
     public float getRadius() {
+    
         return radius;
     }
 
@@ -44,4 +52,4 @@ class Bubble {
     }
 
 }
- **/
+ 
