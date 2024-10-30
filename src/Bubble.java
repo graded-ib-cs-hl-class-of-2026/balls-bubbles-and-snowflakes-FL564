@@ -69,6 +69,16 @@ class Bubble {
             y = s.height - radius;
         }
     }
+//*Mr.Griswold helped me */
+    public void stop() {
+        xSpeed = 0;
+        ySpeed = 0;
+    }
+    public void go(int xs, int ys) {
+        xSpeed = xs;
+        ySpeed = ys;
+        
+    }
 
 }
  

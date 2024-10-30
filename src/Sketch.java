@@ -1,8 +1,9 @@
 import processing.core.PApplet;
+import processing.event.KeyEvent;
 
 public class Sketch extends PApplet {
 
-    /** Represents one ball */
+    /** Represents all balls, bubbles, and snowflakes */
     private Ball ball1;
     private Ball ball2;
     private Ball ball3;
@@ -30,6 +31,7 @@ public class Sketch extends PApplet {
      */
     public void setup() {
         ball1 = new Ball(this);
+        System.out.println(DXF);
         ball2 = new Ball(this, 50, 250, 100, 3, -2);
         ball3 = new Ball(this, 35, 200, 200, 5, 1);
         ball4 = new Ball(this, 25, 100, 100, 10, 1);
@@ -78,11 +80,44 @@ public class Sketch extends PApplet {
         snowflake3.move();
         snowflake4.draw();
         snowflake4.move();
-        
-           
-    
+
     }
 
+    public void keyPressed() {
+        if (key == ' ') {
+            ball1.stop();
+            ball2.stop();
+            ball3.stop();
+            ball4.stop();
+            bubble1.stop();
+            bubble2.stop();
+            bubble3.stop();
+            bubble4.stop();
+            snowflake1.stop();
+            snowflake2.stop();
+            snowflake3.stop();
+            snowflake4.stop();
+
+        }
+//*I used the follwoing website as inspiration: https://stackoverflow.com/questions/22470515/how-stop-and-start-some-actions-in-java-how-to-pause-and-continue-movement, I also had help from Mr.Griswold */
+        if (key == 'g') {
+            ball1.go(2,-1);
+            ball2.go(3, -2);
+            ball3.go(5,1);
+            ball4.go(10, 1);
+            bubble1.go(0, -4);
+            bubble2.go(1, -2);
+            bubble3.go(2, -5);
+            bubble4.go(-1, -3);
+            snowflake1.go(0, 4);
+            snowflake2.go(1, 2);
+            snowflake3.go(2, 1);
+            snowflake4.go(-1, 3);
+    
+
+        }
+
+    }
 
     /** All processing sketches have to use this main method. Don't touch this! */
     public static void main(String[] args) {

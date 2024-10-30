@@ -1,14 +1,21 @@
+import processing.event.KeyEvent;
+
 class Snowflake {
+    //*the sketch that the snowball is in */
     private Sketch s;
+    //*radius of the snowflake */
     private float radius;
     private float x;
     private float y;
+    //*the frames per second at which the snowflake moves right */
     private float xSpeed;
+    //*the frames per second at which the snowflake move down */
     private float ySpeed;
+    //*the snowfalkes color */
     private int fillColor;
     private int borderColor;  
    
-   
+   /** Snowflake constructor */
     public Snowflake(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;
@@ -20,7 +27,7 @@ class Snowflake {
         this.borderColor = s.color(255, 255, 255);
 
     }
-
+    //*Snowflake atributes */
     public Snowflake(Sketch sketch) {
         s = sketch;
         radius = 20;
@@ -30,7 +37,7 @@ class Snowflake {
         ySpeed = 4;
         this.borderColor = s.color(255, 255, 255);
     }
-
+    //*makes the shape of the snowflake */
     public void draw() {
         s.stroke(borderColor);
         s.fill(fillColor);
@@ -40,7 +47,7 @@ class Snowflake {
         s.line(x+radius*.707f,y-radius*.707f,x-radius*.707f,y+radius*.707f);
     
     }
-
+    
     public void move() {
         x = x + xSpeed;
         y = y + ySpeed;
@@ -66,6 +73,17 @@ class Snowflake {
         fillColor = fill;
        
 
+}
+//*Mr.Griswold helped me */
+public void stop() {
+    xSpeed = 0;
+    ySpeed = 0;
+}
+
+public void go(int xs, int ys) {
+    xSpeed = xs;
+    ySpeed = ys;
+    
 }
 
 }
