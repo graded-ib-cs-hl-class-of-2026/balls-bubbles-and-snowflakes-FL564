@@ -117,6 +117,25 @@ public class Sketch extends PApplet {
 
         }
 
+        if (key == 'b') {
+            
+        }
+
+        if (key == 'r') {
+            ball1.reset();
+            ball2.reset();
+            ball3.reset();
+            ball4.reset();
+            bubble1.reset();
+            bubble2.reset();
+            bubble3.reset();
+            bubble4.reset();
+            snowflake1.reset();
+            snowflake2.reset();
+            snowflake3.reset();
+            snowflake4.reset(); 
+        }
+
     }
 
     /** All processing sketches have to use this main method. Don't touch this! */

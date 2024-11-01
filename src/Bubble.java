@@ -80,5 +80,10 @@ class Bubble {
         
     }
 
+    public void reset() {
+        x = 300;
+        y = 0;
+    }
+
 }
  

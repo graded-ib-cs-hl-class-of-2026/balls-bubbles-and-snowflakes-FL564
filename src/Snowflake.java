@@ -86,5 +86,12 @@ public void go(int xs, int ys) {
     
 }
 
+public void reset() {
+    x = 300;
+    y = 0;
+    xSpeed = 0;
+    ySpeed = 4;
+
+}
 }
 
