@@ -25,7 +25,6 @@ class Ball {
     private float xSpeedStop;
 
     private float ySpeedStop;
-    private Sketch originalSketch;
     private int originalFillColor;
     private int originalBorderColor;
     private float originalRadius;
